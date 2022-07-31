@@ -1,19 +1,32 @@
+
+
 import 'package:flutter/material.dart';
 
 class FaceBookScreen extends StatelessWidget {
-  const FaceBookScreen({Key? key}) : super(key: key);
+  FaceBookScreen({Key? key}) : super(key: key);
+  List <Models>  models = [
 
+  Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-1/283787937_1461799470924893_7434805395622483887_n.jpg?stp=dst-jpg_s480x480&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=WHTc29lmrmMAX_ElMXB&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8xGZ_ZRDyMlU6vCryYX4MpnPDhpRVSYLdqNSQ2r-9d9w&oe=62EC5E6A", textPost: "hello every one", name: "Youssef Mohammed", story: false, active: true,time: "2 h ago."), Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-1/257366889_949055509353475_3336170289681035711_n.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=7206a8&_nc_ohc=9GQBC40KjQoAX8cdJtZ&_nc_ht=scontent.fcai19-7.fna&oh=00_AT9X9Tl-gOuocVxJDdnrllpqFWwGq7HWK5IceXM5LxohPQ&oe=62EB228C", textPost: "Hello", name: "Moaz Mohamed", story: true, active: true, time: "5 h ago."),
+   Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-1/116354126_2672973796283154_2858912572407362223_n.jpg?stp=dst-jpg_s480x480&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=x7nq5ZYYCEIAX9Yj-kh&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8RUzZ7GQ5e6GzsZRltGGSfNTlq1P8YGfeTGAecknNqQQ&oe=630D9B9A", textPost: "“Depression is like a heaviness that you can’t ever escape. It crushes down on you, making even the smallest things like tying your shoes or chewing on toast seem like a twenty-mile hike uphill. Depression is a part of you; it’s in your bones and your blood.”", name: "Ali Ezz", story:false, active:false, time: "2 min ago."),
+   Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-1/175359230_3936040943101761_8115425737055085014_n.jpg?stp=dst-jpg_p480x480&_nc_cat=101&ccb=1-7&_nc_sid=7206a8&_nc_ohc=23peRin-mYwAX94VZS2&_nc_ht=scontent.fcai19-7.fna&oh=00_AT9EW51xQF_abSGxHax_lm9a-6eFbw_XoLJF-5d7Hu_56w&oe=630CEC1A", textPost: "Hello every one ", name: "Amir Mohamed", story: true, active: true, time: "Just now."),
+    Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-9/131039495_970101657146986_268455712116596762_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=8Jkgse9CNkYAX_5434W&tn=JB0waqn2P2d_QJOi&_nc_ht=scontent.fcai19-7.fna&oh=00_AT_D_ZGy45tw-PDIGAqnZyMDYhhi_atnmi0nfSpN0EpgZg&oe=630D1034", textPost: "", name: "Magdy Afsha", story:true, active: true, time: "85:45"),
+    Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/296123956_1072968036657691_290187460810294239_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7lOOGfVjyl8AX_QHOe-&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8NWLiYIkPQlZYWpW7X2SIJGL3DCA55GGujGgUS9y-dDQ&oe=62EC65AA", textPost: "5", name: "Ptiso Mosimane", story: true, active: false, time: "5"),
+    Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-6/296721391_633440878140873_5045470662541349587_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9fN95_JUnc8AX8CE8B_&_nc_ht=scontent.fcai19-7.fna&oh=00_AT9wdLRBtqm-vS69x7Wxnodz1JGiT7LtCOa0skvPnyli9Q&oe=62EC7D12", textPost: "Hello", name: "Mohamed Salah", story: false, active: false, time:"2 days."),
+    Models(image: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-1/199385759_345470910277839_3988273979229903886_n.jpg?stp=dst-jpg_p480x480&_nc_cat=1&ccb=1-7&_nc_sid=c6021c&_nc_ohc=cDBoDpz6XHEAX9XvFBV&_nc_ht=scontent.fcai19-7.fna&oh=00_AT9Z08ytSHVs6zGzAwe6hHAcv9mw89w87d4hDZ7an6o5iA&oe=630CED85", textPost: "G O A T", name: "Leo Messi", story: true, active: true, time: "10 days ago."),
+
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+
       child: Scaffold(
         body: Container(
           color: Colors.grey[700],
           child: Column(
 
             children: [buildAppbar(),
-              buildWritePost(),
-              buildPostsList()
+            buildWritePost(),
+            buildPostsList()
             ],
           ),
 
@@ -21,30 +34,210 @@ class FaceBookScreen extends StatelessWidget {
       ),
     );
   }
+  Widget buildPostsList() {
+
+    return Expanded(
+      child: Container(
+        height: 200,
+        child: ListView.builder(
+
+          itemBuilder: (context, index) =>  buildPostItem(index),
+          itemCount:models.length,
+          scrollDirection: Axis.vertical,
+        ),
+      ),
+    );
+  }
+
+
+  Widget buildPostItem(index){
+    return Container(
+      decoration: const BoxDecoration(
+          border: Border(
+              top: BorderSide(color: Colors.black54, width: 5),
+              bottom: BorderSide(color: Colors.black54, width: 5)),
+          color: Colors.black54),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.all(10),
+            child: Row(
+              children: [
+
+                 Stack(
+                   alignment: AlignmentDirectional.bottomEnd,
+                   children: [
+                     Stack(
+                       alignment: AlignmentDirectional.center,
+                      children: [
+                        
+                        Visibility(
+
+                           visible: models[index].story,
+                          child: CircleAvatar(
+                            radius: 22,
+                       backgroundColor: Colors.blue,
+                           ),
+                        ),
+                        
+                        CircleAvatar(
+                          radius: 20,
+                          backgroundImage: NetworkImage(
+
+                        models[index].image),
+                        ),
+                      ]
+                       ,
+                     ),
+                     Stack(
+                       alignment: AlignmentDirectional.bottomEnd,
+                       children: [
+
+
+                       Visibility(
+                         visible: models[index].active,
+                         child: CircleAvatar(
+                           radius: 6,
+                           backgroundColor: Colors.green,
+                         ),
+                       )
+
+                     ],)
+                   ],
+                 ),
+                Container(
+                  margin: EdgeInsets.only(left: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        models[index].name,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
+                      ),
+                      Text(
+                        models[index].time,
+                        style: TextStyle(color: Colors.grey, fontSize: 9),
+                      )
+                    ],
+                  ),
+                ),
+                const Spacer(),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_horiz_rounded,
+                      color: Colors.grey,
+                    )),
+              ],
+            ),
+          ),
+
+          Container(
+              margin: EdgeInsets.only(left: 10,right: 5,bottom: 5),
+              child:  Text(models[index].textPost,style: TextStyle(fontSize: 12,color: Colors.white),)),
+          SizedBox(
+            width: double.infinity,
+            child: Image.network(
+              models[index].image,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Container(
+            decoration: const BoxDecoration(
+                border: Border(
+                    top: BorderSide(
+                      color: Colors.grey,
+                      width: 1,
+                    ))),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextButton.icon(
+                    onPressed: () {
+                      // Respond to button press
+                    },
+                    icon: const Icon(
+                      Icons.favorite,
+                      size: 15,
+                      color: Colors.white,
+                    ),
+                    label: const Text(
+                      "Like",
+                      style: TextStyle(fontSize: 13, color: Colors.white),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: TextButton.icon(
+                    onPressed: () {
+                      Colors.blue;
+                      // Respond to button press
+                    },
+                    icon: const Icon(
+                      Icons.comment,
+                      size: 15,
+                      color: Colors.white,
+                    ),
+                    label: const Text(
+                      "Comment",
+                      style: TextStyle(fontSize: 13, color: Colors.white),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: TextButton.icon(
+                    onPressed: () {
+                      // Respond to button press
+                    },
+                    icon: const Icon(
+                      Icons.screen_share_outlined,
+                      size: 15,
+                      color: Colors.white,
+                    ),
+                    label: const Text(
+                      "Share",
+                      style: TextStyle(fontSize: 13, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
 }
 
 Widget buildAppbar() {
+
   return Container(
     color: Colors.grey[800],
     child: Column(
       children: [
         Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           child: Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.facebook,
                 size: 35,
                 color: Colors.blue,
               ),
-              Text(
+              const Text(
                 " facebook",
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 32),
               ),
-              Spacer(),
+              const Spacer(),
               Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
@@ -54,13 +247,13 @@ Widget buildAppbar() {
                   ),
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.search,
                         color: Colors.white,
                       )),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
               Stack(
@@ -72,7 +265,7 @@ Widget buildAppbar() {
                   ),
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.message,
                         color: Colors.white,
                       )),
@@ -81,7 +274,7 @@ Widget buildAppbar() {
             ],
           ),
         ),
-        DefaultTabController(
+        const DefaultTabController(
           length: 4,
 
           child: TabBar(
@@ -102,18 +295,22 @@ Widget buildAppbar() {
                 color: Colors.white,
               ),
             ),
-            Tab(
-              icon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-            ),
+
             Tab(
               icon: Icon(
                 Icons.notifications_none,
                 color: Colors.white,
               ),
             ),
+                Tab(
+
+                  child: CircleAvatar(
+                    radius: 16,
+                    backgroundImage: NetworkImage('https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-1/283787937_1461799470924893_7434805395622483887_n.jpg?stp=dst-jpg_s480x480&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=WHTc29lmrmMAX_ElMXB&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8xGZ_ZRDyMlU6vCryYX4MpnPDhpRVSYLdqNSQ2r-9d9w&oe=62EC5E6A'),
+
+                  ),
+
+                ),
           ]),
         ),
       ],
@@ -125,28 +322,28 @@ Widget buildWritePost() {
   return Container(
     decoration: BoxDecoration(
         color: Colors.grey[800],
-        border: Border(top: BorderSide(color: Colors.grey, width: 1))),
+        border: const Border(top: BorderSide(color: Colors.grey, width: 1))),
     child: Container(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       child: Row(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundImage: NetworkImage(
-                "https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/23/thumb_122243_default_news_size_5.jpeg"),
+                "https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-1/283787937_1461799470924893_7434805395622483887_n.jpg?stp=dst-jpg_s480x480&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=WHTc29lmrmMAX_ElMXB&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8xGZ_ZRDyMlU6vCryYX4MpnPDhpRVSYLdqNSQ2r-9d9w&oe=62EC5E6A"),
           ),
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(left: 8),
+              margin: const EdgeInsets.only(left: 8),
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 1),
                   borderRadius: BorderRadius.circular(25),
                   color: Colors.grey[800]),
               child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.grey[800]),
-                  child: Text(
+                  child: const Text(
                     "What's in your mind",
                     style: TextStyle(color: Colors.white, fontSize: 12),
                   )),
@@ -154,7 +351,7 @@ Widget buildWritePost() {
           ),
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.photo_album_outlined,
                 color: Colors.green,
               ))
@@ -164,137 +361,18 @@ Widget buildWritePost() {
   );
 }
 
-Widget buildPostItem() {
-  return Container(
-    decoration: BoxDecoration(
-        border: Border(
-            top: BorderSide(color: Colors.black54, width: 5),
-            bottom: BorderSide(color: Colors.black54, width: 5)),
-        color: Colors.black54),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: EdgeInsets.all(10),
-          child: Row(
-            children: [
-              CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://d3j2s6hdd6a7rg.cloudfront.net/v2/uploads/media/default/0002/23/thumb_122243_default_news_size_5.jpeg"),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "  Mohamed Salah",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
-                  ),
-                  Text(
-                    "    2 hours ago.",
-                    style: TextStyle(color: Colors.grey, fontSize: 9),
-                  )
-                ],
-              ),
-              Spacer(),
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.more_horiz_rounded,
-                    color: Colors.grey,
-                  )),
-            ],
-          ),
-        ),
 
-        Container(
-            margin: EdgeInsets.only(left: 10,right: 5,bottom: 5),
-            child: Text("Mohamed Salah Hamed Mahrous Ghaly is an Egyptian professional footballer who plays as a forward or on the right wing for Premier League club Liverpool and captains the Egypt national team.",style: TextStyle(fontSize: 12,color: Colors.white),)),
-        Container(
-          width: double.infinity,
-          child: Image.network(
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBF4FUn35cD1OJlatT8hDj1xU78KoOO52nw&usqp=CAU",
-            fit: BoxFit.fill,
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              border: Border(
-                  top: BorderSide(
-            color: Colors.grey,
-            width: 1,
-          ))),
-          child: Row(
-            children: [
-              Expanded(
-                child: TextButton.icon(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  icon: Icon(
-                    Icons.favorite,
-                    size: 15,
-                    color: Colors.white,
-                  ),
-                  label: Text(
-                    "Like",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton.icon(
-                  onPressed: () {
-                    Colors.blue;
-                    // Respond to button press
-                  },
-                  icon: Icon(
-                    Icons.comment,
-                    size: 15,
-                    color: Colors.white,
-                  ),
-                  label: Text(
-                    "Comment",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: TextButton.icon(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  icon: Icon(
-                    Icons.screen_share_outlined,
-                    size: 15,
-                    color: Colors.white,
-                  ),
-                  label: Text(
-                    "Share",
-                    style: TextStyle(fontSize: 13, color: Colors.white),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
-    ),
-  );
+
+
+
+class Models{
+
+  String image;
+ String textPost;
+ String name;
+ bool story;
+ bool active;
+ String time;
+
+  Models({required this.image, required this.textPost, required this.name, required this.story, required this.active,required this.time});
 }
-
-Widget buildPostsList() {
-  return Expanded(
-    child: Container(
-      height: 200,
-      child: ListView.builder(
-        itemBuilder: (context, index) => buildPostItem(),
-        itemCount: 10,
-        scrollDirection: Axis.vertical,
-      ),
-    ),
-  );
-}
-
