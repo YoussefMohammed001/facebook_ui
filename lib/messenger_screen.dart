@@ -15,7 +15,7 @@ List<StoryModels> storyModels = [
 
 
 ];
-
+//
 List<ChatsModels> itemMessage = [
   ChatsModels(message: "Hello how are you now", imageUrl: "https://scontent.fcai19-7.fna.fbcdn.net/v/t1.6435-1/116354126_2672973796283154_2858912572407362223_n.jpg?stp=dst-jpg_s480x480&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_ohc=x7nq5ZYYCEIAX9Yj-kh&_nc_ht=scontent.fcai19-7.fna&oh=00_AT8RUzZ7GQ5e6GzsZRltGGSfNTlq1P8YGfeTGAecknNqQQ&oe=630D9B9A", userName: "Ali Ezz", online: false, story: true, seen: false,time: "2 days"),
   ChatsModels(time: "2 min ago", message: "Hi, how are you", imageUrl: 'https://scontent.fcai19-7.fna.fbcdn.net/v/t39.30808-1/257366889_949055509353475_3336170289681035711_n.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=7206a8&_nc_ohc=fWW1iclcmEMAX9odjJw&_nc_ht=scontent.fcai19-7.fna&oh=00_AT_ODDXsRgkHAqR8sDlVJXhkPlh82127rQ8ocXYjLfne0g&oe=62ED1CCC', userName: 'Moaz Mohammed', online: true, story: true, seen: true),
